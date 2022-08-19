@@ -21,8 +21,8 @@ function modelLoaded() {
 function gotPoses(results) {
     if (results.length > 0) {
         console.log(results);
-        rightWristX = results[0].poses.rightWrist.X;
-        leftWristX = results[0].poses.leftWrist.X;
+        rightWristX = results[0].pose.rightWrist.X;
+        leftWristX = results[0].pose.leftWrist.X;
         difference = floor(leftWristX - rightWristX);
 
         noseX = results[0].pose.nose.X;
